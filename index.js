@@ -7,6 +7,7 @@ app.use(bodyParse.json())
 app.use(bodyParse.urlencoded({ extended: false }))
 
 require('./src/controller/authController')(app);
+require('./src/controller/sessionController')(app);
 
 
 app.listen(port, () => {

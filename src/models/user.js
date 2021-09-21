@@ -40,7 +40,7 @@ UserShema.pre('save', async function(next) {
 
 })
 
-// inserindo usuria no banco de dados
+// inserindo usuaria no banco de dados
 const User = mongose.model('User', UserShema)
 
 module.exports = User
