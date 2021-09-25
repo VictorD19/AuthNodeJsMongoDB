@@ -25,6 +25,6 @@ npm install
 ~~~
 nodemon index.js
 ~~~
-6 Entra na pasta src/frontend/login no arquivo html inicie o servidor com Live Server
+6 Entra na pasta src/frontend/login no arquivo index.html inicie o servidor com Live Server
 
 7 Experimente :star_struck:
