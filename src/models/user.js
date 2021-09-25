@@ -22,8 +22,8 @@ const UserShema = new mongose.Schema({
         select: false
     },
     date: {
-        type: Date,
-        default: Date.now
+        type: String,
+        default: new Date().toLocaleString()
     }
 })
 

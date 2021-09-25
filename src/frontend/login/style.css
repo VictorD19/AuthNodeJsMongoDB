@@ -63,6 +63,11 @@ form>label {
     color: #00171F;
 }
 
+.sing_in_card>button>a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .sing_in_card>button,
 form>button {
     width: 100%;

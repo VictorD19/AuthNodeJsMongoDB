@@ -48,7 +48,7 @@ const createUser = async(user) => {
 
         }
         // resposta da api
-        console.log(await response.json());
+        const { token } = await response.json()
 
         // -----------Modal------------------ 
         bg_modal.style = 'display:flex;'
@@ -56,7 +56,14 @@ const createUser = async(user) => {
             <h3>Success</h3>
             <p>Cadastro com sucesso</p>`
 
+
+
         setTimeout(() => bg_modal.style = 'display:none;', 1500)
+        setTimeout(() => window.location.href = "/src/frontend/home/", 1000)
+        localStorage.setItem('tokeAuth', JSON.stringify({ token: token }))
+
+
+
 
         // -----------------------------
     } catch (error) {

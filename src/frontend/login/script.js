@@ -31,7 +31,8 @@ async function getDados(user) {
             body: JSON.stringify(user),
             headers: {
                 'Content-Type': 'application/json'
-            }
+            },
+            arguments: JSON.stringify(user)
         }
 
         // consulta e envia dados para api de auth
@@ -46,12 +47,17 @@ async function getDados(user) {
             setTimeout(() => bg_modal.style = 'display:none;', 1500)
 
         } else {
+
             bg_modal.style = 'display:flex;'
             modal.innerHTML = `<i class="fas fa-check-circle fa-5x sucess"></i>
             <h3>Success</h3>
-            <p>Inicio com sucesso</p>`
-            setTimeout(() => bg_modal.style = 'display:none;', 1500)
-            window.location.href = "/"
+            <p>Redirecionando ao inicio</p>`
+            setTimeout(() => bg_modal.style = 'display:none;', 2000)
+            const { token } = await response.json()
+            localStorage.setItem('tokeAuth', JSON.stringify({ token: token }))
+            setTimeout(() => window.location.href = "/src/frontend/home/", 1000)
+
+
         }
 
 
