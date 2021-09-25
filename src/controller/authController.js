@@ -32,8 +32,7 @@ router.post('/register', async(req, res) => {
 
         // recebendo os dados do usuario
         const { name, email, password } = req.body
-
-        // verificando se o usuario existe
+            // verificando se o usuario existe
         if (await User.findOne({ email }))
             return res.status(400).send({ error: 'User already exists' });
 
@@ -64,6 +63,7 @@ router.post('/login', async(req, res) => {
 
     // recebendo os dados do usuario desde o html
     const { email, password } = req.body
+
 
     // istanciando um usuariro pelo email
     const user = await User.findOne({ email }).select('+password')

@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    background: #00171F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sing_in_card {
+    margin-top: 100px;
+    background: #fff;
+    width: 300px;
+    height: 55vh;
+    border-radius: 20px;
+    padding: 10px 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form>input {
+    margin-top: 2px;
+    height: 32px;
+    outline: none;
+    border: none;
+    background: #b3b1b16e;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+form>h1 {
+    font-size: 27px;
+    position: relative;
+    padding: 5px 0;
+}
+
+form>h1::before {
+    position: absolute;
+    content: '';
+    bottom: 10px;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    border-radius: 30px;
+    background: #2a718f;
+}
+
+form>label {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #00171F;
+}
+
+.sing_in_card>button,
+form>button {
+    width: 100%;
+    margin-top: 20px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #5DB7DE;
+    transition: 0.5s all;
+}
+
+.sing_in_card>button:hover,
+form>button:hover {
+    background: #0f6083;
+}
+
+.divisor {
+    width: 100%;
+    height: 1px;
+    background: #5c5c5c;
+}
+
+.modal {
+    top: 190px;
+    width: 200px;
+    height: 200px;
+    background: #fffefee8;
+    z-index: 2;
+    border-radius: 20px;
+    padding: 10px;
+    z-index: 5;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: #575555;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.modal>.error {
+    color: #b42c2c;
+}
+
+.modal>.sucess {
+    color: #2ac825;
+}
+
+.bg-modal {
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
